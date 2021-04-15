@@ -1,0 +1,64 @@
+:root{
+    --head-font:'Cambo', serif;
+    --cont-font:'DM Sans', sans-serif;
+    /* Color palette */
+    --col-emph:#E6975E;
+    --col-emph-light:#e6975e33;
+    --col-blue:#152839;
+    --col-white:#E5E5E5;
+    --col-grey:#999999;
+    /* font-sizes */
+    --ds-fnt-lv1:36px;
+    --ds-fnt-lv2:24px;
+    --ds-fnt-lv3:18px;
+    --ds-fnt-lv4:14px;
+    --mb-fnt-lv1:24px;
+    --mb-fnt-lv2:18px;
+    --mb-fnt-lv3:14px;
+    --mb-fnt-lv4:13px;
+
+}
+
+body{
+    font-family: var(--cont-font);
+    display:flex;
+    flex-direction: column;
+    height:100vh
+}
+main{
+    flex:1
+}
+header{
+    padding:1rem
+}
+header nav{
+    display:flex;
+    justify-content: space-between;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family:var(--head-font)
+}
+ul{
+    list-style:none
+}
+img{
+    max-width:100%
+}
+footer{
+    background-color: var(--col-blue);
+    padding:1rem
+}
+.top-button,.footer-heading,#copyRight{
+    text-align:center;
+}
+
+.top-button{
+    color:var(--col-white);
+    font-size:1.5rem
+}
+.footer-heading{
+    color:var(--col-emph)
+}
+#copyRight{
+    color:var(--col-grey)
+}
