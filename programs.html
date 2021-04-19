@@ -26,21 +26,21 @@
     
     <!--Main Stylesheet  -->
     <link rel="stylesheet" href="./css/main.css">
-    <title> Home </title>
+    <title> Programs </title>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
+    <header >
+        <nav class="solid-nav dark">
+            <div class="logo orange-txt">
                 Logo
             </div>
-            <p>
+            <p class="nav-p">
               <a class="btn " data-bs-toggle="collapse" href="#collapsenav" role="button" aria-expanded="false" aria-controls="collapsenav">
-                <i class="fa fa-bars " aria-hidden="true"></i>
+                <i class="fa fa-bars  orange-txt" aria-hidden="true"></i>
               </a>
               <!-- Searchbar button -->
               <a class="btn " data-bs-toggle="collapse" href="#collapsesearch" role="button" aria-expanded="false" aria-controls="collapsesearch">
-                <i class="fa fa-search " aria-hidden="true"></i>
+                <i class="fa fa-search orange-txt" aria-hidden="true"></i>
               </a>
 
             </p>
@@ -48,7 +48,12 @@
         </nav>
         <div class="collapse" id="collapsenav">
             <div class="card card-body">
-              Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./programs.html">Programs</a></li>
+                    <li><a href="./archive.html">Blog</a></li>
+                    <li><a href="./about.html">About</a></li>
+                </ul>
             </div>
         </div>
         <div class="collapse" id="collapsesearch">
@@ -60,7 +65,61 @@
             </div>
         </div>
     </header>
-    <main>
+
+    <main id="main-content-wrapper">
+        <div class="main-page-content">
+            <h1 class="section-heading">
+                <span class="head-text">Programs</span>
+                <div class="head-deco"></div>
+            </h1>
+        </div>
+        <br>
+        <br>
+        <section class="program-list">
+            <div class="program">
+
+                <div class="program-img">
+                    <img src="./images/Meditation.jpg" alt="" srcset="">
+                </div>
+                <div class="program-meta">
+                    <br>
+                    <h2 class="program-name">Meditation</h2>
+                    <p class="program-description">
+                        This program is focussed on providing everything you need to do meditation the right way and it offers a step by step process to improve your meditation
+                    </p>
+                    <button class="cta-button home-cta-button"><a href="#" class="white-link">Get Started</a></button>
+                </div>
+            </div>
+            <div class="program">
+
+                <div class="program-img">
+                    <img src="./images/Fitness.jpg" alt="" srcset="">
+                </div>
+                <div class="program-meta">
+                    <br>
+                    <h2 class="program-name">Fitness</h2>
+                    <p class="program-description">
+                        This program is focussed on providing everything you need to do meditation the right way and it offers a step by step process to improve your meditation
+                    </p>
+                    <button class="cta-button home-cta-button"><a href="#" class="white-link">Get Started</a></button>
+                </div>
+            </div>
+            <div class="program">
+
+                <div class="program-img">
+                    <img src="./images/weightLoss.jpg" alt="" srcset="">
+                </div>
+                <div class="program-meta">
+                    <br>
+                    <h2 class="program-name">Weight Loss</h2>
+                    <p class="program-description">
+                        This program is focussed on providing everything you need to do meditation the right way and it offers a step by step process to improve your meditation
+                    </p>
+                    <button class="cta-button home-cta-button"><a href="#" class="white-link">Get Started</a></button>
+                </div>
+            </div>
+        </section>
+
 
     </main>
     <footer>

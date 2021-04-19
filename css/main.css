@@ -34,15 +34,26 @@ main{
 }
 
 header{
-    height:20px;
+
+    height:40px;
     width:100%;
-    padding:1rem;
     position:fixed;
     z-index:10
 }
+.main-page-content{
+   margin-top:80px
+}
 header nav{
+    padding:1rem;
     display:flex;
     justify-content: space-between;
+}
+.solid-nav{
+    align-items: center;
+}
+.nav-p{
+    display:flex;
+    align-items:flex-end;
 }
 h1,h2,h3,h4,h5,h6{
     font-family:var(--head-font)
@@ -57,6 +68,9 @@ a{
 }
 a:hover{
     color:var(--col-emph-dark)
+}
+.dark{
+    background-color: var(--col-blue);
 }
 .white-link{
     color:var(--col-white);
@@ -92,6 +106,7 @@ footer{
 #copyRight{
     color:var(--col-grey)
 }
+
 /*overlays Styling*/
 #landing-section{
     background-image:url("../images/Background.jpg");
@@ -102,6 +117,11 @@ footer{
     display:flex;
     flex-direction: column;
     height:100vh
+}
+#main-content-wrapper{
+    position:relative;
+    margin-top:20px;
+    padding:1rem
 }
 .ls-content-wrapper{
     position:relative;
@@ -198,10 +218,28 @@ article{
     z-index:0;
     transition:0.2s all;
     overflow: hidden;
+    object-fit:cover
+
 }
 .post-meta{
     z-index:4;
 }
 article:hover .blog-image img{
     transform:scale(1.1)
+}
+
+@media (max-width:630px){
+    .blog-image{
+        max-height:400px;
+        
+    }
+}
+
+/* Programmes Page */
+
+.program-meta{
+    padding:0.5rem
+}
+.program{
+    margin-bottom:4rem
 }
