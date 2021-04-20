@@ -59,6 +59,8 @@ h1,h2,h3,h4,h5,h6{
     font-family:var(--head-font)
 }
 ul{
+    padding:0;
+    margin:0;
     list-style:none
 }
 a{
@@ -108,11 +110,13 @@ footer{
 }
 
 /*overlays Styling*/
-#landing-section{
+.about-widgets-wrapper,#landing-section{
     background-image:url("../images/Background.jpg");
     background-position:center;
     background-size:cover
 }
+
+
 #landing-section-content{
     display:flex;
     flex-direction: column;
@@ -247,4 +251,28 @@ article:hover .blog-image img{
 /* Archive page */
 .blog-category{
     margin-bottom:3rem
+}
+.category-blog-list{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:2rem 1rem
+}
+/* About Page */
+.about-widgets{
+    padding:2rem 1rem
+}
+.widget-text{
+    display:flex;
+    margin:2rem 0
+}
+.widget-text p,.social-widget p{
+    padding-left:40px;
+    width:80%
+}
+.social-widget{
+    display: flex;
+    padding:0.5rem 0rem
+}
+.social-widget i{
+    width:30px
 }
