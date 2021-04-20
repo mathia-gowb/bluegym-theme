@@ -276,3 +276,17 @@ article:hover .blog-image img{
 .social-widget i{
     width:30px
 }
+/* Post page */
+.blog-post-category{
+    padding:1rem 0
+}
+.in{
+    font-style: italic;
+    color:var(--col-grey)
+}
+.post-categories{
+    font-weight:500
+}
+.meta-small{
+    line-height:0.5rem
+}
