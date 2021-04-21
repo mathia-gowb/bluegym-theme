@@ -128,7 +128,6 @@ footer{
 #main-content-wrapper{
     position:relative;
     margin-top:20px;
-    padding:1rem
 }
 .ls-content-wrapper{
     display:flex;
@@ -270,6 +269,7 @@ article{
 article:hover .blog-image img{
     transform:scale(1.1)
 }
+
 @media (min-width:450px){
     .popular-programs-list{
         grid-gap: 1rem ;
@@ -316,13 +316,93 @@ article:hover .blog-image img{
         grid-template-columns: 1fr 1fr 1fr 1fr ;
     }
 }
-/* Programmes Page */
+/* Programs Page */
+.popular-programs-ls{
+    display:none
+}
+.popular-program-article{
+    cursor:pointer;
 
+}
+.popular-program-article img{
+
+    transition:0.3s all
+}
+.popular-program-article:hover img{
+    transform:scale(.98); 
+    border-radius:30px
+}
 .program-meta{
-    padding:0.5rem
+    padding:0.5rem;
+    max-width:650px
+}
+.program-img{
+    max-width:700px;
+    border-radius:15px;
+    overflow:hidden
 }
 .program{
-    margin-bottom:4rem
+    margin-bottom:4rem;
+    
+}
+@media(max-width:680px){
+    .programs-main-wrapper{
+        padding:1.5rem
+    }
+}
+@media(min-width:540px){
+    .program{
+        display:flex;
+        align-items:center;
+        
+    }
+    .program-meta{
+        padding-left:10%
+    }
+    .program>*{
+        flex:1
+    }
+}
+@media(min-width:680px){
+    .program{
+        padding:5% 1%
+    }
+    .popular-programs-ls{
+        display:block;
+        background-image:url("../images/post5.jpg");
+        background-position:center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow:hidden
+    }
+
+
+    .programs-list {
+      display:flex;
+      overflow:scroll;
+      padding:2% 10%;
+    }
+    .programs-list article{
+        min-width:200px;
+        margin:1rem;
+        text-align:center
+    }
+    .programs-list {
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        scrollbar-width: none;  /* Firefox */
+    }
+    .programs-list::-webkit-scrollbar { 
+        display: none;  /* Safari and Chrome */
+    }
+    .popular-program-article img{
+        border-radius:10px
+    }
+
+}
+@media (min-width:900px){
+    .program{
+        margin-left:4rem;
+    }
 }
 
 /* Archive page */
