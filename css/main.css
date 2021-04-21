@@ -72,9 +72,10 @@ a{
 a:hover{
     color:var(--col-emph-dark)
 }
-.dark{
+.dark-solid{
     background-color: var(--col-blue);
 }
+
 .white-link{
     color:var(--col-white);
 }
@@ -109,7 +110,9 @@ footer{
 #copyRight{
     color:var(--col-grey)
 }
-
+.wrapper-with-padding{
+    padding:1.4em
+}
 /*overlays Styling*/
 .about-widgets-wrapper,#landing-section{
     background-image:url("../images/Background.jpg");
@@ -208,9 +211,7 @@ button:hover{
 .down-button{
     margin-left:2rem
 }
-.dark{
-    background-color:var(--col-blue)
-}
+
 .popular-programs,.popular-posts{
     padding:2rem;
 }
@@ -357,7 +358,7 @@ article:hover .blog-image img{
         
     }
     .program-meta{
-        padding-left:10%
+        padding:5%
     }
     .program>*{
         flex:1
@@ -375,8 +376,9 @@ article:hover .blog-image img{
         background-size: cover;
         overflow:hidden
     }
-
-
+    .program-wrapper:nth-child(even) .program {
+        flex-direction:row-reverse
+    }
     .programs-list {
       display:flex;
       overflow:scroll;
@@ -401,18 +403,49 @@ article:hover .blog-image img{
 }
 @media (min-width:900px){
     .program{
-        margin-left:4rem;
+        padding:8%;
     }
 }
 
 /* Archive page */
+
 .blog-category{
     margin-bottom:3rem
+}
+.blogs-list{
+    max-width:950px;
+    margin:auto
 }
 .category-blog-list{
     display:grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap:2rem 1rem
+    grid-gap:2rem 1rem;
+}
+
+@media(min-width:450px){
+
+    .category-blog-list{
+        text-align:center
+    }
+    .category-blog-list figcaption{
+        padding:1rem
+    }
+    .blog-category button{
+        align-self:center
+    }
+    .cta-button-wrapper{
+        text-align:center
+    }
+}
+@media(min-width:640px) and (max-width:900px){
+    .category-blog-list{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media(min-width:900px){
+    .category-blog-list{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
 /* About Page */
 .about-widgets{
@@ -446,4 +479,32 @@ article:hover .blog-image img{
 }
 .meta-small{
     line-height:0.5rem
+}
+.recent-posts-sidebar{
+    padding:1.5rem
+}
+.recent-posts-sidebar h6{
+    padding:0.8rem 0rem
+}
+@media (min-width:465px){
+    .blog-meta{
+        text-align:center
+    }
+}
+@media (min-width:750px){
+    .outer-wrapper{
+        display:flex;
+        max-width:1200px;
+        margin:auto
+    }
+    .outer-wrapper main{
+        flex:4
+    }
+    .outer-wrapper aside{
+        flex:1;
+       
+    }
+    .aside-recent-posts{
+        margin-top:300px
+    }
 }

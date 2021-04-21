@@ -30,7 +30,7 @@
 </head>
 <body>
     <header >
-        <nav class="solid-nav dark">
+        <nav class="solid-nav dark-solid">
             <div class="logo orange-txt">
                 Logo
             </div>
@@ -65,23 +65,25 @@
             </div>
         </div>
     </header>
-
-    <main id="main-content-wrapper">
+    <div class="outer-wrapper">
+    <main id="main-content-wrapper" class="wrapper-with-padding">
         <div class="main-page-content">
             <br>
             <br>
             <article class="blog">
-                <div class="blog-post-category"><span class="in">In:</span>  <span class="post-categories">Meditation, Eating</span> </div>
-                <h1 class="blog-post-heading">
-                    
-                    <span class="head-text">How to eat healthy effortesly</span>
-                    <div class="head-deco"></div>
-                </h1>
+                <div class="blog-meta">
+                    <div class="blog-post-category"><span class="in">In:</span>  <span class="post-categories">Meditation, Eating</span> </div>
+                    <h1 class="section-heading">
+                        <span class="head-text">10 weight loss receipes you should try</span>
+                        <div class="head-deco"></div>
+                    </h1>
+    
+                    <br>
+                    <p class="meta-small">by <span class="author orange-txt">Matvins Johannson</span> </p>
+                    <p class="meta-small">On 23 April, 2021</p>
+                    <br>
+                </div>
 
-                <br>
-                <p class="meta-small">by <span class="author orange-txt">Matvins Johannson</span> </p>
-                <p class="meta-small">On 23 April, 2021</p>
-                <br>
                 <img src="./images/post7.jpg" alt="" srcset="">
                 <br>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis debitis minima ex quaerat odit quos! Quisquam qui sed dolores consequuntur, voluptatum sit praesentium nemo? Ea vel minima totam veniam similique.</p>
@@ -89,6 +91,33 @@
 
         </div>
     </main>
+    <aside class="recent-posts-sidebar">
+        <!-- Visible in -->
+        <section class="aside-recent-posts">
+            <br>
+            <p class="aside-recent-heading">Recent Posts</p>
+            <div class="aside-recent-posts-wrapper">
+                <article>
+                    <img src="./images/post.jpg" alt="" srcset="" class="blog-image">
+                    <h6 class="blog-heading">Best Green Salads for Vegeterians</h6>
+                    <hr>
+                </article>
+                <article>
+                    <img src="./images/post3.jpg" alt="" srcset="" class="blog-image">
+                    <h6 class="blog-heading">Best Green Salads for Vegeterians</h6>
+                    <hr>
+                </article>
+                <article>
+                    <img src="./images/post5.jpg" alt="" srcset="" class="blog-image">
+                    <h6 class="blog-heading">Best Green Salads for Vegeterians</h6>
+                    <hr>
+                </article>
+            </div>
+
+
+        </section>
+    </aside>
+    </div>
     <footer>
         <section class="top-button"><a href="#" class="white-link"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a></section>
         <br>
