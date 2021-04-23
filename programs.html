@@ -29,26 +29,33 @@
     <title> Programs </title>
 </head>
 <body>
-    <header >
+    <header>
         <nav class="solid-nav dark-solid">
             <div class="logo orange-txt">
                 Logo
             </div>
-            <p class="nav-p">
-              <a class="btn " data-bs-toggle="collapse" href="#collapsenav" role="button" aria-expanded="false" aria-controls="collapsenav">
-                <i class="fa fa-bars  orange-txt" aria-hidden="true"></i>
-              </a>
-              <!-- Searchbar button -->
-              <a class="btn " data-bs-toggle="collapse" href="#collapsesearch" role="button" aria-expanded="false" aria-controls="collapsesearch">
-                <i class="fa fa-search orange-txt" aria-hidden="true"></i>
-              </a>
-
-            </p>
-
+            <div class="nav-links">
+                <ul id="nav-ul">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./programs.html">Programs</a>
+                    </li>
+                    <li><a href="./archive.html">Blog</a></li>
+                    <li><a href="./about.html">About</a></li>
+                </ul>
+                <ul>
+                    <li><a class="btn " data-bs-toggle="collapse" href="#collapsenav" role="button" aria-expanded="false" aria-controls="collapsenav">
+                        <i class="fa fa-bars  orange-txt" aria-hidden="true"></i>
+                      </a>
+                      <a class="btn " data-bs-toggle="collapse" href="#collapsesearch" role="button" aria-expanded="false" aria-controls="collapsesearch">
+                        <i class="fa fa-search orange-txt" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                </ul>
+            </div>
         </nav>
         <div class="collapse" id="collapsenav">
             <div class="card card-body">
-                <ul>
+                <ul class="dropdown-ul">
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./programs.html">Programs</a></li>
                     <li><a href="./archive.html">Blog</a></li>
@@ -56,14 +63,7 @@
                 </ul>
             </div>
         </div>
-        <div class="collapse" id="collapsesearch">
-            <div class="card card-body">
-                <form action="">
-                    <input type="text" name="" id="">
-                    <button type="submit"><i class="fa fa-search " aria-hidden="true"></i></button>
-                </form>
-            </div>
-        </div>
+
     </header>
 
     <main id="main-content-wrapper" class="programs-main-wrapper">

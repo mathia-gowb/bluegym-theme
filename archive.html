@@ -29,26 +29,33 @@
     <title> Programs </title>
 </head>
 <body>
-    <header >
-        <nav class="solid-nav dark-solid">
+    <header>
+        <nav >
             <div class="logo orange-txt">
                 Logo
             </div>
-            <p class="nav-p">
-              <a class="btn " data-bs-toggle="collapse" href="#collapsenav" role="button" aria-expanded="false" aria-controls="collapsenav">
-                <i class="fa fa-bars  orange-txt" aria-hidden="true"></i>
-              </a>
-              <!-- Searchbar button -->
-              <a class="btn " data-bs-toggle="collapse" href="#collapsesearch" role="button" aria-expanded="false" aria-controls="collapsesearch">
-                <i class="fa fa-search orange-txt" aria-hidden="true"></i>
-              </a>
-
-            </p>
-
+            <div class="nav-links">
+                <ul id="nav-ul">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./programs.html">Programs</a>
+                    </li>
+                    <li><a href="./archive.html">Blog</a></li>
+                    <li><a href="./about.html">About</a></li>
+                </ul>
+                <ul>
+                    <li><a class="btn " data-bs-toggle="collapse" href="#collapsenav" role="button" aria-expanded="false" aria-controls="collapsenav">
+                        <i class="fa fa-bars  orange-txt" aria-hidden="true"></i>
+                      </a>
+                      <a class="btn " data-bs-toggle="collapse" href="#collapsesearch" role="button" aria-expanded="false" aria-controls="collapsesearch">
+                        <i class="fa fa-search orange-txt" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                </ul>
+            </div>
         </nav>
         <div class="collapse" id="collapsenav">
             <div class="card card-body">
-                <ul>
+                <ul class="dropdown-ul">
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./programs.html">Programs</a></li>
                     <li><a href="./archive.html">Blog</a></li>
@@ -56,14 +63,7 @@
                 </ul>
             </div>
         </div>
-        <div class="collapse" id="collapsesearch">
-            <div class="card card-body">
-                <form action="">
-                    <input type="text" name="" id="">
-                    <button type="submit"><i class="fa fa-search " aria-hidden="true"></i></button>
-                </form>
-            </div>
-        </div>
+
     </header>
 
     <main id="main-content-wrapper" class="wrapper-with-padding">
@@ -80,38 +80,55 @@
                 <h2 class="blog-section-heading">Meditation</h2>
                 <hr>
                 <div class="category-blog-list">
-                    <figure >
-                        <img src="./images/post7.jpg" alt="" srcset="">
-                        <figcaption><p><a href="#" class="text-dark"> How to lose weight in 30days</a></p></figcaption>
-                    </figure>
-                    <figure >
-                        <img src="./images/post2.jpg" alt="" srcset="">
-                        <figcaption><p><a href="#" class="text-dark"> How to lose weight in 30days</a></p></figcaption>
-                    </figure>
-                    <figure >
-                        <img src="./images/post5.jpg" alt="" srcset="">
-                        <figcaption><p><a href="#" class="text-dark"> How to lose weight in 30days</a></p></figcaption>
-                    </figure>
-                    <figure >
-                        <img src="./images/post3.jpg" alt="" srcset="">
-                        <figcaption><p><a href="#" class="text-dark"> How to lose weight in 30days</a></p></figcaption>
-                    </figure>
-                    <figure >
-                        <img src="./images/post7.jpg" alt="" srcset="">
-                        <figcaption><p><a href="#" class="text-dark"> How to lose weight in 30days</a></p></figcaption>
-                    </figure>
-                    <figure >
-                        <img src="./images/post2.jpg" alt="" srcset="">
-                        <figcaption><p><a href="#" class="text-dark"> How to lose weight in 30days</a></p></figcaption>
-                    </figure>
-                    <figure >
-                        <img src="./images/post5.jpg" alt="" srcset="">
-                        <figcaption><p><a href="#" class="text-dark"> How to lose weight in 30days</a></p></figcaption>
-                    </figure>
-                    <figure >
-                        <img src="./images/post3.jpg" alt="" srcset="">
-                        <figcaption><p><a href="#" class="text-dark"> How to lose weight in 30days</a></p></figcaption>
-                    </figure>
+                    <a href="#" class="text-dark">
+                        <figure class="blog-post">
+                            <img src="./images/post7.jpg" alt="" srcset="">
+                            <figcaption><p> How to lose weight in 30days</p></figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="text-dark">
+                        <figure class="blog-post">
+                            <img src="./images/post2.jpg" alt="" srcset="">
+                            <figcaption><p> How to lose weight in 30days</p></figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="text-dark">
+                        <figure class="blog-post">
+                            <img src="./images/post5.jpg" alt="" srcset="">
+                            <figcaption><p> How to lose weight in 30days</p></figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="text-dark">
+                        <figure class="blog-post">
+                            <img src="./images/post3.jpg" alt="" srcset="">
+                            <figcaption><p> How to lose weight in 30days</p></figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="text-dark">
+                        <figure class="blog-post">
+                            <img src="./images/post7.jpg" alt="" srcset="">
+                            <figcaption><p> How to lose weight in 30days</p></figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="text-dark">
+                        <figure class="blog-post">
+                            <img src="./images/post2.jpg" alt="" srcset="">
+                            <figcaption><p> How to lose weight in 30days</p></figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="text-dark">
+                        <figure class="blog-post">
+                            <img src="./images/post5.jpg" alt="" srcset="">
+                            <figcaption><p> How to lose weight in 30days</p></figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="text-dark">
+                        <figure class="blog-post">
+                            <img src="./images/post3.jpg" alt="" srcset="">
+                            <figcaption><p> How to lose weight in 30days</p></figcaption>
+                        </figure>
+                    </a>
+
                 </div>
 
                 <div class="cta-button-wrapper">
@@ -123,38 +140,54 @@
                 <h2 class="blog-section-heading">Weight Loss</h2>
                 <hr>
                 <div class="category-blog-list">
-                    <figure >
-                        <img src="./images/post7.jpg" alt="" srcset="">
-                        <figcaption><p><a href="#" class="text-dark"> How to lose weight in 30days</a></p></figcaption>
-                    </figure>
-                    <figure >
-                        <img src="./images/post2.jpg" alt="" srcset="">
-                        <figcaption><p><a href="#" class="text-dark"> How to lose weight in 30days</a></p></figcaption>
-                    </figure>
-                    <figure >
-                        <img src="./images/post5.jpg" alt="" srcset="">
-                        <figcaption><p><a href="#" class="text-dark"> How to lose weight in 30days</a></p></figcaption>
-                    </figure>
-                    <figure >
-                        <img src="./images/post3.jpg" alt="" srcset="">
-                        <figcaption><p><a href="#" class="text-dark"> How to lose weight in 30days</a></p></figcaption>
-                    </figure>
-                    <figure >
-                        <img src="./images/post7.jpg" alt="" srcset="">
-                        <figcaption><p><a href="#" class="text-dark"> How to lose weight in 30days</a></p></figcaption>
-                    </figure>
-                    <figure >
-                        <img src="./images/post2.jpg" alt="" srcset="">
-                        <figcaption><p><a href="#" class="text-dark"> How to lose weight in 30days</a></p></figcaption>
-                    </figure>
-                    <figure >
-                        <img src="./images/post5.jpg" alt="" srcset="">
-                        <figcaption><p><a href="#" class="text-dark"> How to lose weight in 30days</a></p></figcaption>
-                    </figure>
-                    <figure >
-                        <img src="./images/post3.jpg" alt="" srcset="">
-                        <figcaption><p><a href="#" class="text-dark"> How to lose weight in 30days</a></p></figcaption>
-                    </figure>
+                    <a href="#" class="text-dark">
+                        <figure class="blog-post">
+                            <img src="./images/post7.jpg" alt="" srcset="">
+                            <figcaption><p> How to lose weight in 30days</p></figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="text-dark">
+                        <figure class="blog-post">
+                            <img src="./images/post2.jpg" alt="" srcset="">
+                            <figcaption><p> How to lose weight in 30days</p></figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="text-dark">
+                        <figure class="blog-post">
+                            <img src="./images/post5.jpg" alt="" srcset="">
+                            <figcaption><p> How to lose weight in 30days</p></figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="text-dark">
+                        <figure class="blog-post">
+                            <img src="./images/post3.jpg" alt="" srcset="">
+                            <figcaption><p> How to lose weight in 30days</p></figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="text-dark">
+                        <figure class="blog-post">
+                            <img src="./images/post7.jpg" alt="" srcset="">
+                            <figcaption><p> How to lose weight in 30days</p></figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="text-dark">
+                        <figure class="blog-post">
+                            <img src="./images/post2.jpg" alt="" srcset="">
+                            <figcaption><p> How to lose weight in 30days</p></figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="text-dark">
+                        <figure class="blog-post">
+                            <img src="./images/post5.jpg" alt="" srcset="">
+                            <figcaption><p> How to lose weight in 30days</p></figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="text-dark">
+                        <figure class="blog-post">
+                            <img src="./images/post3.jpg" alt="" srcset="">
+                            <figcaption><p> How to lose weight in 30days</p></figcaption>
+                        </figure>
+                    </a>
                 </div>
                 <div class="cta-button-wrapper">
                     <button class="cta-button home-cta-button"><a href="#" class="white-link2">Load More..</a></button>
@@ -165,38 +198,54 @@
                 <h2 class="blog-section-heading">Cadio excercises</h2>
                 <hr>
                 <div class="category-blog-list">
-                    <figure >
-                        <img src="./images/post7.jpg" alt="" srcset="">
-                        <figcaption><p><a href="#" class="text-dark"> How to lose weight in 30days</a></p></figcaption>
-                    </figure>
-                    <figure >
-                        <img src="./images/post2.jpg" alt="" srcset="">
-                        <figcaption><p><a href="#" class="text-dark"> How to lose weight in 30days</a></p></figcaption>
-                    </figure>
-                    <figure >
-                        <img src="./images/post5.jpg" alt="" srcset="">
-                        <figcaption><p><a href="#" class="text-dark"> How to lose weight in 30days</a></p></figcaption>
-                    </figure>
-                    <figure >
-                        <img src="./images/post3.jpg" alt="" srcset="">
-                        <figcaption><p><a href="#" class="text-dark"> How to lose weight in 30days</a></p></figcaption>
-                    </figure>
-                    <figure >
-                        <img src="./images/post7.jpg" alt="" srcset="">
-                        <figcaption><p><a href="#" class="text-dark"> How to lose weight in 30days</a></p></figcaption>
-                    </figure>
-                    <figure >
-                        <img src="./images/post2.jpg" alt="" srcset="">
-                        <figcaption><p><a href="#" class="text-dark"> How to lose weight in 30days</a></p></figcaption>
-                    </figure>
-                    <figure >
-                        <img src="./images/post5.jpg" alt="" srcset="">
-                        <figcaption><p><a href="#" class="text-dark"> How to lose weight in 30days</a></p></figcaption>
-                    </figure>
-                    <figure >
-                        <img src="./images/post3.jpg" alt="" srcset="">
-                        <figcaption><p><a href="#" class="text-dark"> How to lose weight in 30days</a></p></figcaption>
-                    </figure>
+                    <a href="#" class="text-dark">
+                        <figure class="blog-post">
+                            <img src="./images/post7.jpg" alt="" srcset="">
+                            <figcaption><p> How to lose weight in 30days</p></figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="text-dark">
+                        <figure class="blog-post">
+                            <img src="./images/post2.jpg" alt="" srcset="">
+                            <figcaption><p> How to lose weight in 30days</p></figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="text-dark">
+                        <figure class="blog-post">
+                            <img src="./images/post5.jpg" alt="" srcset="">
+                            <figcaption><p> How to lose weight in 30days</p></figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="text-dark">
+                        <figure class="blog-post">
+                            <img src="./images/post3.jpg" alt="" srcset="">
+                            <figcaption><p> How to lose weight in 30days</p></figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="text-dark">
+                        <figure class="blog-post">
+                            <img src="./images/post7.jpg" alt="" srcset="">
+                            <figcaption><p> How to lose weight in 30days</p></figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="text-dark">
+                        <figure class="blog-post">
+                            <img src="./images/post2.jpg" alt="" srcset="">
+                            <figcaption><p> How to lose weight in 30days</p></figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="text-dark">
+                        <figure class="blog-post">
+                            <img src="./images/post5.jpg" alt="" srcset="">
+                            <figcaption><p> How to lose weight in 30days</p></figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="text-dark">
+                        <figure class="blog-post">
+                            <img src="./images/post3.jpg" alt="" srcset="">
+                            <figcaption><p> How to lose weight in 30days</p></figcaption>
+                        </figure>
+                    </a>
                 </div>
                 <div class="cta-button-wrapper">
                     <button class="cta-button home-cta-button"><a href="#" class="white-link2">Load More..</a></button>
