@@ -177,7 +177,10 @@ footer{
     height:100%
 }
 .welcome-text-wrapper{
-    min-width:250px
+    min-width:250px;
+}
+.transition,.welcome-image,.popular-posts-list{
+    visibility:hidden
 }
 .welcome-image{
     overflow: hidden;
@@ -186,8 +189,9 @@ footer{
     object-fit: cover;
 }
 .main-home-heading{
+   
     position:relative;
-    color:var(--col-emph)
+    color:var(--col-emph) ; 
 }
 .welcome-message{
     color:var(--col-white)
@@ -255,7 +259,8 @@ button:hover{
 }
 .popular-program{
     margin-bottom:2rem;
-    background:var(--prog-gradient);
+    background:var(--prog-gradient); 
+    visibility:hidden;
     background-repeat: no-repeat;
     padding:1rem;
     border-radius: 20px;
@@ -573,4 +578,26 @@ article:hover .blog-image img{
     .aside-recent-posts{
         margin-top:300px
     }
+}
+/* Animations */
+@keyframes popout{
+    0%{
+        transform:scale(0.8)
+    }
+}
+@keyframes slidein{
+    0%{
+        transform:translateY(100px);
+        
+    }
+}
+
+.slidein,.popout{
+    visibility: visible;
+}
+.slidein{
+    animation: slidein 2s;
+}
+.popout{
+    animation: popout 2s
 }
