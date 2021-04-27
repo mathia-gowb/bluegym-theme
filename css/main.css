@@ -33,6 +33,29 @@ body{
     min-width:250px;
     height:100vh
 }
+.search-area{
+    visibility:hidden;
+    color:var(--col-white);
+    padding:5%;
+    position:fixed;
+    background-color:var(--col-blue-transparent);
+    width:100%;
+    height:100vh;
+    z-index:20;
+    transition:0.3s all
+}
+.search-input{
+    margin-top:5%;
+    font-size:130%;
+    width:100%;
+    color:var(--col-emph);
+    background-color:transparent;
+    border:none;
+    border-bottom:1px solid var(--col-emph) 
+}
+.search-input:focus{
+    outline: none;
+}
 /* displays */
 article,.widget-text,body,header nav,.nav-links,.ls-content-wrapper{
     display:flex
@@ -179,7 +202,7 @@ footer{
 .welcome-text-wrapper{
     min-width:250px;
 }
-.transition,.welcome-image,.popular-posts-list{
+.transition,.welcome-image,.popular-posts-list,.popular{
     visibility:hidden
 }
 .welcome-image{
@@ -347,12 +370,18 @@ article:hover .blog-image img{
     }
 }
 /* Programs Page */
+.program-list-area{
+    display:flex;
+    align-items:center;
+    padding:2rem
+}
 .popular-programs-ls{
     display:none
 }
 .popular-program-article{
     cursor:pointer;
 }
+
 .popular-program-article img{
     transition:0.3s all
 }
@@ -377,6 +406,8 @@ article:hover .blog-image img{
 }
 .blog-post{
     transition:all 0.3s;
+    box-shadow: rgba(27, 32, 37, 0.331) 3px 2px 5px 0px;
+    border-radius: 5px;
 }
 .blog-post:hover{
     transform: matrix(1, 0, 0, 1, 0, -8);
@@ -417,21 +448,14 @@ article:hover .blog-image img{
         flex-direction:row-reverse
     }
     .programs-list {
-      display:flex;
-      overflow:scroll;
+      display:grid;
+      grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
       padding:2% 10%;
     }
     .programs-list article{
         min-width:200px;
         margin:1rem;
         text-align:center
-    }
-    .programs-list {
-        -ms-overflow-style: none;  /* Internet Explorer 10+ */
-        scrollbar-width: none;  /* Firefox */
-    }
-    .programs-list::-webkit-scrollbar { 
-        display: none;  /* Safari and Chrome */
     }
     .popular-program-article img{
         border-radius:10px
@@ -582,7 +606,7 @@ article:hover .blog-image img{
 /* Animations */
 @keyframes popout{
     0%{
-        transform:scale(0.8)
+        transform:scale(0.4)
     }
 }
 @keyframes slidein{
@@ -596,8 +620,8 @@ article:hover .blog-image img{
     visibility: visible;
 }
 .slidein{
-    animation: slidein 2s;
+    animation: slidein 0.5s;
 }
 .popout{
-    animation: popout 2s
+    animation: popout 0.5s
 }
