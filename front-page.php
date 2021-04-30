@@ -75,11 +75,17 @@
         <input type="search" name="search" id="search" class="search-input" placeholder="Search For A blog Topic">
     </div>
     <main class="home-main">
-        <section id="landing-section" class="ovelays-container">
+        <section id="landing-section" class="ovelays-container" style=<?php 
+            if(get_background_image()){
+                echo"background-image:url(".get_background_image().")";
+            }else{
+                echo "background-image:url(".get_template_directory_uri()."/assets/images/default.jpg)";
+            }
+            ?>
+        >
             <div id="landing-section-content" class="overlay">
                 <div class="ls-content-wrapper">
                     <div class="welcome-text-wrapper  ">
-
                         <h1 class="main-heading main-home-heading transition">Stay at home <br> Stay   healthy</h1>
                         <br>
                         <p class="welcome-message transition">Stay in shape even at home, Exercising   will help you to stay healthy easily wherever and whenever you are</p>
@@ -156,42 +162,23 @@
             <br>
             <br>
             <div class="popular-posts-list">
-              <article class="blog article-preview">
-                <div class="blog-image">
-                    <img src="./images/post3.jpg" alt="post image" >
-                  </div>
-                  <div class="post-meta">
-                      <h5 class="article-heading"><a href="#" class="white-link"> 10 situps variation you should try</a></h5>
-                      <h6 class="article-date orange-txt">Published: april 13 2021</h6>
-                  </div>
-              </article>
-              <article class="blog article-preview">
-                    <div class="blog-image">
-                    <img src="./images/post2.jpg" alt="post image" >
-                  </div>
-                  <div class="post-meta">
-                      <h5 class="article-heading"><a href="#" class="white-link"> 10 situps variation you should try</a></h5>
-                      <h6 class="article-date orange-txt">Published: april 13 2021</h6>
-                  </div>
-              </article>
-              <article class="blog article-preview">
-                  <div class="blog-image">
-                    <img src="./images/post3.jpg" alt="post image" >
-                  </div>
-                  <div class="post-meta">
-                      <h5 class="article-heading"><a href="#" class="white-link"> 10 situps variation you should try</a></h5>
-                      <h6 class="article-date orange-txt">Published: april 13 2021</h6>
-                  </div>
-              </article>
-              <article class="blog article-preview"> 
-                  <div class="blog-image">
-                    <img src="./images/post5.jpg" alt="post image" >
-                  </div>
-                  <div class="post-meta">
-                      <h5 class="article-heading"><a href="#" class="white-link"> 10 situps variation you should try</a></h5>
-                      <h6 class="article-date orange-txt">Published: april 13 2021</h6>
-                  </div>
-              </article>
+            <?php
+                /* get most popular post in this category */
+                    $popular=new WP_Query(
+                        array(
+                            'posts_per_page'=>4,
+                            'meta_key'=>'popular_posts',
+                            'orderby'=>'meta_value_num', 
+                            'order'=>'DESC'
+                        )
+                        );
+                        if($popular->have_posts()){
+                            while($popular->have_posts()){
+                               $popular->the_post();
+                               get_template_part('template-parts/content','home-archive');
+                            }
+                        }
+            ?><!-- end the outputing of blogs in this category -->
             </div>
         </section>
     </main>

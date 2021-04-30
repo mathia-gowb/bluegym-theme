@@ -1,10 +1,12 @@
 <?php
+    /*Template Name: custom-about */
+?>
+<?php
     get_header()
 ?>
 <main id="main-content-wrapper" class="wrapper-with-padding">
         <div class="main-page-content">
             <div class="about-main-content">
-
                 <div class="about-img">
                     <img src="./images/post.jpg" alt="about-image" srcset="">
                 </div>
@@ -19,18 +21,13 @@
                     </p>
                 </div>
             </div>
-
         </div>
         <br>
         <br>
-
-
-
     </main>
     <aside>
-        <div class="about-widgets-wrapper">
+        <div class="about-widgets-wrapper" style="background-image:url(<?=get_background_image()?>)">
             <div class="about-widgets overlay">
-
                 <h2 class="section-heading">
                     <span class="head-text white-txt">Contact</span>
                     <div class="head-deco"></div>
@@ -41,7 +38,6 @@
                     <div class="widget">
                         <h4 class="widget-heading orange-txt">Visit Us</h4>
                         <div class="widget-text">
-
                             <i class="fa fa-map fa-3x white-txt" aria-hidden="true"></i>
                             <p class="widget-paragraph white-txt">
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -51,7 +47,6 @@
                     <div class="widget">
                         <h4 class="widget-heading orange-txt">Mail us</h4>
                         <div class="widget-text">
-
                             <i class="fa fa-envelope fa-3x white-txt" aria-hidden="true"></i>
                             <p class="widget-paragraph white-txt">
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -60,9 +55,7 @@
                     </div>
                     <div class="widget">
                         <h4 class="widget-heading orange-txt">Call us</h4>
-                        
                         <div class="widget-text">
-
                             <i class="fa fa-phone-square fa-3x white-txt" aria-hidden="true"></i>
                             <p class="widget-paragraph white-txt">
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.

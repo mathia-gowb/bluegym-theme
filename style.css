@@ -112,6 +112,7 @@ h1,h2,h3,h4,h5,h6{
 ul{
     list-style:none
 }
+
 a{
     text-decoration:none;
     color:var(--col-emph);
@@ -120,6 +121,16 @@ a{
 a:hover{
     color:var(--col-emph-dark)
 }
+
+.current_page_item a{
+    color: var(--col-emph-dark) !important;
+}
+#nav-ul a{
+    color:var(--col-white) 
+} 
+#nav-ul a:hover{
+    color:var(--col-emph)!important
+} 
 .dark-solid{
     background-color: var(--col-blue);
 }
