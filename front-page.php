@@ -11,14 +11,14 @@
 <body>
     <header>
         <nav class="home-nav"><!-- class="dark-solid" -->
-            <div class="logo orange-txt">
+            <div class=" orange-txt">
             <a href="<?= home_url();?>" class="site-identity">
             <?php
                 $custom_logo_id = get_theme_mod( 'custom_logo' );
                 $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
                 /* Outputs site image or name */
                 if ( has_custom_logo() ) {
-                    echo '<div id="logo"><img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . ' "></div>';
+                    echo '<div id="logo-img"><img class="logo" src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . ' "></div>';
                 } else {
                     echo '<h1>' . get_bloginfo('name') . '</h1>';
                 }
@@ -64,7 +64,6 @@
 
             </div>
         </div>
-
     </header>
     <div class="search-area text-center ">
         <div class="text-end ">
@@ -72,7 +71,10 @@
             <i class="fa fa-times fa-3x close-button " aria-hidden="true"> </i>
         </div>
         <br>
-        <input type="search" name="search" id="search" class="search-input" placeholder="Search For A blog Topic">
+        <?php
+            get_search_form();
+        ?>
+
     </div>
     <main class="home-main">
         <section id="landing-section" class="ovelays-container" style=<?php 
@@ -86,14 +88,18 @@
             <div id="landing-section-content" class="overlay">
                 <div class="ls-content-wrapper">
                     <div class="welcome-text-wrapper  ">
-                        <h1 class="main-heading main-home-heading transition">Stay at home <br> Stay   healthy</h1>
+                        <h1 class="main-heading main-home-heading transition">
+                            <?=get_theme_mod('bluegymn-main-callout-headline')?>
+                        </h1>
                         <br>
-                        <p class="welcome-message transition">Stay in shape even at home, Exercising   will help you to stay healthy easily wherever and whenever you are</p>
+                        <p class="welcome-message transition">
+                            <?= get_theme_mod('bluegymn-main-callout-message')?>
+                        </p>
                         <br>
-                        <button class="cta-button home-cta-button transition"><a href="#" class="white-link2 ">Get Started</a></button>
+                        <button class="cta-button home-cta-button transition"><a href="#" class="white-link2 "><?= get_theme_mod('bluegymn-cta-button-text')?></a></button>
                     </div>
                     <div class="welcome-image">
-                            <img src="./images/College.png" alt="">
+                            <img src="<?=get_template_directory_uri(  )?>/assets/images/College.png" alt="">
                     </div>
                 </div>
                 <h4 class="scroll-down">
@@ -106,7 +112,7 @@
             <br>
             <br>
             <h2 class="section-heading">
-                <span class="head-text">Popular Programs</span>
+                <span class="head-text">Upcoming programs</span>
                 <div class="head-deco"></div>
             </h2>
             <br>
@@ -114,42 +120,42 @@
             <div class="popular-programs-list">
                 <div class="popular-program text-center">
                     <div class="program-icon">
-                        <i class="fa fa-forumbee fa-5x" aria-hidden="true"></i>
+                    <object data="<?=get_template_directory_uri()?>/assets/images/undraw_Hiking_re_k0bc.svg" width="100%" height="200px"></object>
                     </div>
                     <br>
-                    <h3 class="program-heading white-txt">HIIT</h3>
+                    <h3 class="program-heading white-txt">Hiking</h3>
                     <br>
                     <p class="program-description text-center white-txt">
                         This programme focussess on highly intensive training and is appropriate for intermmediate to advanced exercisers
                     </p>
                     <br>
-                    <button class="cta-button home-cta-button"><a href="#" class="white-link2">Get Started</a></button>
+                    <button class="text-decoration-line-through" disabled>Get Started</button>
                 </div>
                 <div class="popular-program text-center">
                     <div class="program-icon">
-                        <i class="fa fa-forumbee fa-5x" aria-hidden="true"></i>
+                        <object data="<?=get_template_directory_uri()?>/assets/images/undraw_mindfulness_scgo.svg" width="100%" height="200px"></object>
                     </div>
                     <br>
-                    <h3 class="program-heading white-txt">HIIT</h3>
+                    <h3 class="program-heading white-txt">Meditation</h3>
                     <br>
                     <p class="program-description text-center white-txt">
                         This programme focussess on highly intensive training and is appropriate for intermmediate to advanced exercisers
                     </p>
                     <br>
-                    <button class="cta-button home-cta-button"><a href="#" class="white-link2">Get Started</a></button>
+                    <button class="text-decoration-line-through" disabled>Get Started</button>
                 </div>
                 <div class="popular-program text-center">
                     <div class="program-icon">
-                        <i class="fa fa-forumbee fa-5x" aria-hidden="true"></i>
+                        <object data="<?=get_template_directory_uri()?>/assets/images/undraw_indoor_bike_pwa4 .svg" width="100%" height="200px"></object>
                     </div>
                     <br>
-                    <h3 class="program-heading white-txt">HIIT</h3>
+                    <h3 class="program-heading white-txt">Homeworkout</h3>
                     <br>
                     <p class="program-description text-center white-txt">
                         This programme focussess on highly intensive training and is appropriate for intermmediate to advanced exercisers
                     </p>
                     <br>
-                    <button class="cta-button home-cta-button"><a href="#" class="white-link2">Get Started</a></button>
+                    <button class="text-decoration-line-through" disabled>Get Started</button>
                 </div>
             </div>
         </section>

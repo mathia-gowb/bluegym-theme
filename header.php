@@ -11,19 +11,19 @@
 <body>
     <header>
         <nav class="solid-nav dark-solid">
-            <div class="logo orange-txt">
-            <a href="<?= home_url();?>" class="site-identity">
-            <?php
-                $custom_logo_id = get_theme_mod( 'custom_logo' );
-                $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-                /* Outputs site image or name */
-                if ( has_custom_logo() ) {
-                    echo '<div id="logo"><img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo   ( 'name' ) . ' "></div>';
-                } else {
-                    echo '<h1>' . get_bloginfo('name') . '</h1>';
-                }
-            ?>
-            </a>
+            <div class=" orange-txt">
+                <a href="<?= home_url();?>" class="site-identity">
+                <?php
+                    $custom_logo_id = get_theme_mod( 'custom_logo' );
+                    $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+                    /* Outputs site image or name */
+                    if ( has_custom_logo() ) {
+                        echo '<div id="logo-img"><img class="logo" src="' . esc_url( $logo[0] ) . '"    alt="' . get_bloginfo( 'name' ) . ' "></div>';
+                    } else {
+                        echo '<h1>' . get_bloginfo('name') . '</h1>';
+                    }
+                ?>
+                </a>
             </div>
             <div class="nav-links">
                 <ul id="nav-ul">
@@ -75,5 +75,7 @@
             <i class="fa fa-times fa-3x close-button " aria-hidden="true"> </i>
         </div>
         <br>
-        <input type="search" name="search" id="search" class="search-input" placeholder="Search For A blog Topic">
+        <?php
+            get_search_form();
+        ?>
     </div>

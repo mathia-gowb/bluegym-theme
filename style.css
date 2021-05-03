@@ -15,7 +15,8 @@ Author: Mathobo Ngelekanyo
     --col-emph-dark:#da803f;
     --col-emph-light:#e6975e33;
     --col-blue:#152839;
-    --col-blue-transparent:#152839d7;
+    --col-blue-transparent:#081520d7;
+    --col-blue-transparentI:#091018e8;
     --col-white:#b6b5b5;
     --col-white-link:#fbfbfb;
     --col-grey:#999999;
@@ -42,18 +43,28 @@ body{
     min-width:250px;
     height:100vh
 }
+
+.logo {
+    height:50px;
+    width:100px;
+    width:100%;
+    object-fit:fill;
+    object-position:left
+}
+
 .search-area{
     visibility:hidden;
     color:var(--col-white);
     padding:5%;
     position:fixed;
-    background-color:var(--col-blue-transparent);
+    background-color:var(--col-blue-transparentI);
     width:100%;
     height:100vh;
     z-index:20;
     transition:0.3s all
 }
-.search-input{
+
+.search-area input[type="text"]{
     margin-top:5%;
     font-size:130%;
     width:100%;
@@ -62,9 +73,14 @@ body{
     border:none;
     border-bottom:1px solid var(--col-emph) 
 }
-.search-input:focus{
+
+.search-area input[type="submit"]{
+    margin-top:20px
+}
+.search-area input[type="text"]:focus{
     outline: none;
 }
+
 /* displays */
 article,.widget-text,body,header nav,.nav-links,.ls-content-wrapper,.action-buttons{
     display:flex
@@ -107,7 +123,7 @@ header nav{
 }
 
 h1,h2,h3,h4,h5,h6{
-    font-family:var(--head-font)
+    font-family:var(--head-font);
 }
 ul{
     list-style:none
@@ -157,9 +173,11 @@ button a{
     color:white
 }
 img{
+    width:100%;
     max-width:100%;
     object-fit: cover;
 }
+
 footer{
     background-color: var(--col-blue);
     padding:1rem
@@ -250,10 +268,14 @@ footer{
 
 /* Main welcome page */
 button{
-    border:none;
-    padding:0.5rem 1rem;
-    background-color:var(--col-emph);
     border-radius:10px;
+    padding:0.5rem 1rem;
+}
+.cta-button,input[type="submit"]{
+    border:none;
+    
+    background-color:var(--col-emph);
+    
     cursor:pointer;
     transition:0.3s all
 }
@@ -269,7 +291,7 @@ button{
         max-width:600px;
     }
 }
-button:hover{
+.cta-button:hover,input[type="submit"]:hover{
     background-color:var(--col-emph-dark)
 }
 .scroll-down{
@@ -390,6 +412,9 @@ article:hover .blog-image img{
     }
 }
 /* Programs Page */
+.popular{
+    max-width:250px
+}
 .program-list-area{
     display:flex;
     align-items:center;
@@ -413,8 +438,11 @@ article:hover .blog-image img{
     padding:0.5rem;
     max-width:650px
 }
-.popular-programs-ls .head-text,.blog-section-heading{
+.section-heading{
     font-size:var(--ds-fnt-lv2)
+}
+.popular-programs-ls .head-text,.blog-section-heading{
+    font-size:var(--ds-fnt-lv3)
 }
 .program-img{
     max-width:400px;
@@ -426,8 +454,6 @@ article:hover .blog-image img{
 }
 .blog-post{
     transition:all 0.3s;
-    box-shadow: rgba(27, 32, 37, 0.331) 3px 2px 5px 0px;
-    border-radius: 5px;
 }
 .blog-post:hover{
     transform: matrix(1, 0, 0, 1, 0, -8);
@@ -471,7 +497,7 @@ article:hover .blog-image img{
     .programs-list {
       display:grid;
       grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
-      padding:2% 10%;
+      padding:2rem 3rem;
     }
     .programs-list article{
         min-width:200px;
@@ -484,7 +510,7 @@ article:hover .blog-image img{
 }
 @media (min-width:900px){
     .program{
-        padding:8%;
+        padding:1rem;
     }
 }
 /* Archive page */

@@ -1,6 +1,6 @@
 <article class="blog article-preview"> 
     <div class="blog-image">
-        <img src="<?=the_post_thumbnail_url('medium')?>" alt="blog image">
+        <?=the_post_thumbnail('cropped-medium')?>
     </div>
     <div class="post-meta">
         <h5 class="article-heading"><a href="#" class="white-link"><?=the_title()?></a></h5>

@@ -36,7 +36,7 @@
                             $recent_posts->the_post();
                         ?>
                             <article>
-                            <img src="<?php the_post_thumbnail_url('small');?>" alt="blog image" srcset="" class="blog-image">
+                            <?=the_post_thumbnail('cropped-medium')?>
                             <h6 class="blog-heading"><a href="<?=the_permalink()?>" class=""><?=the_title()?> </a></h6>
                             <hr>
                             </article>

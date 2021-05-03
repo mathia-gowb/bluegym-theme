@@ -26,7 +26,15 @@
         <br>
     </main>
     <aside>
-        <div class="about-widgets-wrapper" style="background-image:url(<?=get_background_image()?>)">
+        <div class="about-widgets-wrapper"
+            style=<?php 
+                if(get_background_image()){
+                    echo"background-image:url(".get_background_image().")";
+                }else{
+                    echo "background-image:url(".get_template_directory_uri()."/assets/images/default.jpg)";
+                }
+                ?>
+        >
             <div class="about-widgets overlay">
                 <h2 class="section-heading">
                     <span class="head-text white-txt">Contact</span>

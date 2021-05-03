@@ -6,7 +6,8 @@ function bluegymn_theme_support(){
     add_theme_support('title-tag');
     add_theme_support('custom-logo');
     add_theme_support('post-thumbnails');
-    add_theme_support('custom-background'); 
+    add_theme_support('custom-background',array('transport'=>'refresh')); 
+    add_image_size('cropped-medium',250,200,true);
 }
 
 add_action('after_setup_theme','bluegymn_theme_support');
@@ -72,7 +73,39 @@ function bluegymn_track_posts($post_id) {
 }
 add_action('wp_head', 'bluegymn_track_posts');
 
+/* the excerpt length customisation functions */
+/* changes excerpt_length  */
+function bluegymn_excerpt_length(){
+    return 20;
+    }
+add_filter('excerpt_length', 'bluegymn_excerpt_length');
+
+/* changes exerpt more  */
+function bluegymn_excerpt_more($more) {
+    global $post;
+    return '';
+}
+add_filter('excerpt_more', 'bluegymn_excerpt_more');
+
+/* widget areas for the footer */
+function bluegymn_widget_areas(){
+
+    register_sidebar(
+        array(
+            'before_title'=>'<h4 class="widget-heading">',
+            'after_title'=>'</h4>',
+            'before_widget'=>'<div class="widget_area white-txt">',
+            'after_widget'=>'</div>',
+            'name'=>'Footer Area',
+            'id'=>'footer-1',
+            'description'=>'footer widget area'
+        )
+        );
+}
+add_action('widgets_init','bluegymn_widget_areas');
 
 
+/* Requires all the theme-mods-functions.php file which contains all the function  files for the theme mod*/
+require "theme-mods-functions.php"
 
 ?>

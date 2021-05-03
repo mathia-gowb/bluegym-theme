@@ -29,22 +29,36 @@
                 $category_id=get_cat_ID($cat_name);
                 /* get url of the category */
                 $category_link=get_category_link($category_id);
-        ?>
+            ?>
+            <?php
+                /* get most popular post in this category */
+                    $latest=new WP_Query(
+                        array(
+                            'category_name'=>$cat_name,
+                            'posts_per_page'=>1,
+                        )
+                        );
+                        if($latest->have_posts()){
+                            while($latest->have_posts()){
+                               $latest->the_post();
+                            }
+                        }
+            ?><!-- end the outputing of blogs in this category -->
             <section class="program-wrapper">
             <div class="program">
                 <div class="program-img">
-                    <img src="./images/Meditation.jpg" alt="" srcset="">
+                    <img src="<?=the_post_thumbnail_url("medium")?>" alt="" srcset="">
                 </div>
                 <div class="program-meta">
                     <br>
-                    <h2 class="program-name"><?=$cat_name?></h2>
+                    <h2 class="program-name">Latest in <?=$cat_name?></h2>
                     <p class="program-description">
-                        This program is focussed on providing everything you need to do meditation the right way and it offers a step by step process to improve your meditation
+                    <a href="<?=the_permalink()?>" class="text-dark"><strong class="text-decoration-underline"><?=the_title()?></strong></a>
+                        <?=the_excerpt()?>
                     </p>
-                    <button class="cta-button home-cta-button"><a href="<?=$category_link?>" class="white-link2">Get Started</a></button>
+                    <button class="cta-button home-cta-button"><a href="<?=$category_link?>" class="white-link2">Category Archive</a></button>
                 </div>
             </div>
-            
             <?php
                 /* get most popular post in this category */
                     $most_popular=new WP_Query(
@@ -52,7 +66,8 @@
                             'category_name'=>$cat_name,
                             'posts_per_page'=>1,
                             'meta_key'=>'popular_posts',
-                            'orderby'=>'meta_value_num', 'order'=>'DESC'
+                            'orderby'=>'meta_value_num', 
+                            'order'=>'DESC'
                         )
                         );
                         if($most_popular->have_posts()){

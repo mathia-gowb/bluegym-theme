@@ -1,6 +1,6 @@
 <article class="popular">
     <figure class="popular-program-article">
-        <img src="<?=the_post_thumbnail_url('medium')?>" alt="blog image" alt="" srcset="">
+        <?=the_post_thumbnail('cropped-medium')?>
         <figcaption class="popular-article-name">
         <br>
         <p><a href="#" class="white-link"><?=the_title()?></a></p>
