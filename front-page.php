@@ -66,8 +66,7 @@
         </div>
     </header>
     <div class="search-area text-center ">
-        <div class="text-end ">
-            Close
+        <div class="text-end">
             <i class="fa fa-times fa-3x close-button " aria-hidden="true"> </i>
         </div>
         <br>
