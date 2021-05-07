@@ -33,7 +33,7 @@
                     <p class="meta-small"><?=the_date()?></p>
                     <br>
                 </div>
-                <img src="<?=the_post_thumbnail_url('large')?>" alt="blog-image" srcset="">
+                <img src="<?=the_post_thumbnail_url('small')?>" alt="blog-image" srcset="">
                 <br>
                 <?=the_content()?>
             </article>

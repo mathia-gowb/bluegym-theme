@@ -1,0 +1,35 @@
+{
+  "name": "bluefit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mathia-gowb/bluegym-theme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mathia-gowb/bluegym-theme/issues"
+  },
+  "homepage": "https://github.com/mathia-gowb/bluegym-theme#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
+    "babel-loader": "^8.2.2",
+    "file-loader": "^6.2.0",
+    "postcss-preset-env": "^6.7.0",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.7.0"
+  },
+  "dependencies": {
+    "core-js": "^3.12.0",
+    "css-loader": "^5.2.4",
+    "mini-css-extract-plugin": "^1.6.0",
+    "postcss": "^8.2.14",
+    "postcss-loader": "^5.2.0"
+  }
+}
